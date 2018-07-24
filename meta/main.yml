@@ -1,5 +1,5 @@
 galaxy_info:
-  role_name: dosbos_gog
+  role_name: dosbox_gog
   author: Richard Gibert
   description: Install GOG games that run under DOSbox
   license: GPLv3
