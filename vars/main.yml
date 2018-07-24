@@ -1,0 +1,10 @@
+---
+dosbox_root: "~/.local/share/dosbox-{{ dosbox_gog_app_name_short }}"
+dosbox_config_sdl_fullscreen: true
+dosbox_config_render_aspect: true
+dosbox_config_autoexec_contents: |
+  mount c {{ dosbox_root }}
+  c:
+  cd APP
+  {{ dosbox_gog_app_bin | basename }}
+  exit
