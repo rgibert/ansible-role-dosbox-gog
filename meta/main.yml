@@ -15,5 +15,5 @@ galaxy_info:
     - dosbox-gog
 
 dependencies:
-  - role: dosbox
+  - role: rgibert.dosbox
     tags: dosbox-gog
