@@ -3,5 +3,7 @@ Type=Application
 Name={{ dosbox_gog_app_name_long }}
 Comment=Play {{ dosbox_gog_app_name_long }}
 Exec=sh -c "{{ dosbox_root }}/dosbox.sh"
-Icon={{ dosbox_root }}/{{ dosbox_gog_app_name_short }}.jpg
+{% if dosbox_gog_desktop_img is defined %}
+Icon={{ dosbox_gog_desktop_img }}
+{% endif %}
 Terminal=false

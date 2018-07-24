@@ -1,3 +1,4 @@
 ---
 dosbox_gog_desktop_location: ~/.local/share/applications
+dosbox_gog_desktop_img: "{{ dosbox_root }}"
 dosbox_gog_bin_location: ~/.local/bin
