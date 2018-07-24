@@ -13,8 +13,8 @@ Installs GOG's DOSbox games
 | dosbox_gog_app_bin | | Binary to use to start the game |
 | dosbox_gog_app_name_long | | Long form of application name (eg: Quest for Glory) |
 | dosbox_gog_app_name_short | | Short form of application name (eg: qfg1) |
-| dosbox_gog_bin_location | ~/.local/bin | |
-| dosbox_gog_desktop_location | ~/.local/share/applications | |
+| dosbox_gog_desktop_location | ~/.local/share/applications | Path to store desktop file in |
+| dosbox_gog_desktop_img | | Image to use for desktop file |
 | dosbox_gog_installer_path | | Local path to installer |
 
 ## Dependencies

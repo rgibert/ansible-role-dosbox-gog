@@ -11,11 +11,8 @@
     - name: create directories
       file:
         state: directory
-        path: "{{ item }}"
+        path: "{{ dosbox_gog_desktop_location }}"
         mode: "0755"
-      with_items:
-        - "{{ dosbox_gog_desktop_location }}"
-        - "{{ dosbox_gog_bin_location }}"
 
     - name: unpack installer
       command: innoextract -d {{ dosbox_root }} {{ dosbox_gog_installer_path }}
@@ -27,13 +24,6 @@
         src: "templates/dosbox-gog.desktop.j2"
         dest: "{{ dosbox_gog_desktop_location }}/dosbox-gog-{{ dosbox_gog_app_name_short }}.desktop"
         mode: "0644"
-
-    - name: link binary
-      file:
-        state: link
-        src: "{{ dosbox_root }}/dosbox.sh"
-        dest: "{{ dosbox_gog_bin_location }}/dosbox-gog-{{ dosbox_gog_app_name_short }}.sh"
-        force: yes
 
   tags:
     - dosbox-gog
