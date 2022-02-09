@@ -1,12 +1,19 @@
 ---
 - block:
 
-    - name: install innoextract
+    - name: install innoextract (!Darwin)
       package:
         name: innoextract
         state: present
-      become: yes
-      become_user: root
+      become: true
+      when: ansible_os_family != "Darwin"
+
+    - name: install innoextract (Darwin)
+      homebrew:
+        name: innoextract
+        state: present
+      become: false
+      when: ansible_os_family == "Darwin"
 
     - name: create directories
       file:
